@@ -1,0 +1,8 @@
+Some useful snippets for bash when manipulating files
+
+
+TARGET_KEY="s3://LOCATION"
+for filename in $(ls -lprt | grep -v / | awk {'print $9'} | uniq -u) ;  do echo "aws s3 mv $filename $TARGET_KEY --sse" ;  done
+
+
+for filename in $(aws s3 ls s3://LOCATION | awk {'print $4'} | cut -d"." -f1 ); do aws s3 mv s3://$filename; done
