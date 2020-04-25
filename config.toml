@@ -136,6 +136,8 @@ url = "https://github.com/MunifTanjim/minimo"
 [blackfriday]
 hrefTargetBlank = true
 
+staticDir = ["static"]
+
 [languages]
 # edit this block for your own language
 [languages.en]
